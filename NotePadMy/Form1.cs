@@ -345,11 +345,13 @@ namespace Menus
             StringBuilder FindStr = new StringBuilder();
             string MainStr = richTextBox1.Text;
             FindStr.Append(txtBoxFind.Text);
+
             
-            if (richTextBox1.SelectedText != null) Count++;
+            if (richTextBox1.SelectedText != "" ) Count++;
 
             if (txtBoxFind.Text != "" && txtBoxReplace.Text != "" )
             {
+                
                 if (Count > 0) 
                 {
                     
