@@ -346,6 +346,8 @@ namespace Menus
             string MainStr = richTextBox1.Text;
             FindStr.Append(txtBoxFind.Text);
             
+            if (richTextBox1.SelectedText != null) Count++;
+
             if (txtBoxFind.Text != "" && txtBoxReplace.Text != "" )
             {
                 if (Count > 0) 
@@ -367,29 +369,9 @@ namespace Menus
                 {
                     button2_Click(sender, e);
                     Count++;
-                    /*for (int i = 0; i <= MainStr.Length - FindStr.Length; i++)
-                    {
-
-                        //MessageBox.Show($"{MainStr.Substring(i,FindStr.Length)}");
-                        if (MainStr.Substring(i, FindStr.Length) == FindStr.ToString())
-                        {
-                            richTextBox1.SelectionStart = i;
-                            richTextBox1.SelectionLength = FindStr.Length;
-                            richTextBox1.SelectionBackColor = Color.Silver;
-                            Count++;
-                            return;
-
-                        }
-
-                    }*/
+                   
                 }
-                
-                  
-               
 
-                    //    MessageBox.Show($"{richTextBox1.SelectedText}");
-
-                
             }
         }
 
